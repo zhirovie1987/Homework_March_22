@@ -21,6 +21,9 @@ int main () {
 			cout << "Isn't lucky. Oh.. What a shitty day.. So, grab some beer to console yourself :-)";
 		}
 	}
+	else {
+		cout << "Ticket number should be 6's digits.";
+	}
 	return 0;
 }
 
@@ -37,9 +40,11 @@ bool Is_Lucky_Number (uint32_t data) {
 		}
 		data /= 10;
 	}
-	
+	/*
 	if (H_Nibble_Summ == L_Nibble_Summ) {
 		return true;
 	}
 	return false;
+	*/
+	return (H_Nibble_Summ == L_Nibble_Summ);
 }
