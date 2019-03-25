@@ -2,8 +2,8 @@
 
 using namespace std;
 
-const auto MAGIC_NUMBER(999999);
-const auto DIGITS_NUMBER(6);
+const auto MAGIC_NUMBER = 999999;
+const auto DIGITS_NUMBER = 6;
 
 bool Is_Lucky_Number (uint32_t data);
 
@@ -29,7 +29,7 @@ int main () {
 
 bool Is_Lucky_Number (uint32_t data) {
 	
-	uint16_t L_Nibble_Summ(0), H_Nibble_Summ(0);
+	uint16_t L_Nibble_Summ = 0, H_Nibble_Summ = 0;
 	
 	for (auto i = DIGITS_NUMBER; i > 0; --i) {
 		if (i > DIGITS_NUMBER / 2) {
