@@ -10,13 +10,12 @@ uint32_t Get_Digits_Summ (uint32_t data);
 int main () {
 	
 	uint16_t Array[255];
-	uint32_t Summ(0);
-	bool Is_Divisible = false;
-	uint16_t Number_Quantity(0);
+	uint32_t Summ = 0;
+	uint8_t Number_Quantity = 0;
 
 	cin >> Number_Quantity;
 	
-	for (uint16_t i = 0; i < Number_Quantity; ++i) {
+	for (uint8_t i = 0; i < Number_Quantity; ++i) {
 		cin >> Array[i];
 		Summ += Array[i];
 	}
