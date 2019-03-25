@@ -9,7 +9,7 @@ bool Is_Lucky_Number (uint32_t data);
 
 int main () {
 	
-	uint32_t Value(0);
+	uint32_t Value = 0;
 	
 	cin >> Value;
 	
