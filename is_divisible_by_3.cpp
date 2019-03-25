@@ -8,30 +8,38 @@ bool Is_Divisible_By_3 (uint16_t data);
 uint32_t Get_Digits_Summ (uint32_t data);
 
 int main () {
-	
-	uint16_t Array[255];
+	const uint16_t MAX = 20;
+	uint16_t Array[MAX];
 	uint32_t Summ = 0;
-	uint8_t Number_Quantity = 0;
+	uint16_t Number_Quantity = 0;
 
 	cin >> Number_Quantity;
 	
-	for (uint8_t i = 0; i < Number_Quantity; ++i) {
-		cin >> Array[i];
-		Summ += Array[i];
-	}
-	
-	if (Is_Divisible_By_3 (Get_Digits_Summ (Summ))) {
-		Summ = 0;
-		for (auto i = 0; i < Number_Quantity; ++i) {
-		Summ += Array[i] * pow (10, i);
+	if ( Number_Quantity <= MAX) {
+			for (auto i = 0; i < Number_Quantity; ++i) {
+			cin >> Array[i];
+			Summ += Array[i];
 		}
-		cout << "Yes "<< Summ;;
+		
+		if (Is_Divisible_By_3 (Get_Digits_Summ (Summ))) {
+			Summ = 0;
+			for (auto i = 0; i < Number_Quantity; ++i) {
+			Summ += Array[i] * pow (10, i);
+			}
+			cout << "Yes "<< Summ;;
+		}
+		
+		else {
+			cout << "No";
+		}	
+	
+		
+	} 
+	else {
+		cout << "Out of range";
 	}
 	
-	else {
-		cout << "No";
-	}	
-	
+
 	return 0;
 }
 
